@@ -1,0 +1,280 @@
+:root {
+    /*Definir variables globales (Colores, Tipografías, etc.)*/
+    --main-color: #212529;
+    --secondary-color: #343A40;
+    --accent-color: #495057;
+    --primary-text-color: #F8F9FA;
+    --secondary-text-color: #E9ECEF;
+    --accent-text-color: #DEE2E6;
+    --main-font: Arial;
+}
+
+/* :root{
+    --main-color: #6c1d45;
+    --secondary-color: #9b2242;
+    --accent-color: #b59461;
+    --primary-text-color: white;
+    --secondary-text-color: #707372;
+    --accent-text-color: rgb(255, 255, 255);
+    --main-font: Gill Sans;
+} */
+
+/* :root{
+    --main-color: #3A0CA3;
+    --secondary-color: #480CA8;
+    --accent-color: #7209B7;
+    --primary-text-color: #FFFFFF;
+    --secondary-text-color: #707372;
+    --accent-text-color: #FFFFFF;
+    --main-font: Gill Sans;
+} */
+
+/*dimensiones*/
+
+
+@media all and (max-width: 1310px) {
+
+    /*Definir estilo para pantallas inferiores a 1310 píxeles*/
+    .mensajeerror {
+        display: none;
+        /*No mostrar nada*/
+    }
+
+    .container {
+        margin-top: 70px;
+        /*Dejar un margen interno de 70px*/
+    }
+}
+
+@media all and (max-width: 600px) {
+
+    /*Definir estilo para pantallas inferiores a los 600px*/
+    .container {
+        display: none;
+        /*No mostrar nada que contenga la clase "container"*/
+    }
+
+    .mensajeerror {
+        padding-top: 150px;
+        /*dejar un margen interno de 150 píxeles para los elementos que contengan la clase "mensajeerror"*/
+        display: block;
+        /* Respeta el ancho y el alto especificados. Se coloca verticalmente a respecto del anterior. Si tiene contenido y no especificamos ancho ni alto, el ancho será el 100% de la capa que lo contiene y el alto será lo que ocupe el contenido.*/
+        color: var(--main-color);
+        /*Se define el color del texto, en este caso, con base en las variables globales*/
+    }
+
+    .menu-mensajeerror {
+        padding-top: 150px;
+        /*dejar un margen interno de 150 píxeles para los elementos que contengan la clase "mensajeerror"*/
+        display: block;
+        color: var(--main-color);
+    }
+}
+
+/*DISEÑOS*/
+
+.container {
+    font-family: var(--main-font);
+    /*se define, con base en las variables globales, la tipografía que se usa para los elementos con clase container. So se muestran para los elementos que contienen la clase, y para los que están dentro de estos.*/
+    text-align: justify; /*Se alinea el texto en alineación justificado*/
+    margin-top: 58px; /*Se deja margen externo de 58 píxeles*/
+}
+
+body {
+    background-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center; /*Se centran los diferentes estilos de título. aplica para todos*/
+    text-transform: uppercase; /*Se ajustan los títulos a mayúsculas. Aplica para todos.*/
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.main .main-title,
+.sub-title {
+    text-align: justify;
+    background-color: var(--accent-color);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--primary-text-color);
+}
+
+.submain {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.link {
+    text-align: center;
+}
+
+.enlace {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--accent-text-color);
+    text-align: center;
+}
+
+.elaboro {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.separador {
+    background-color: var(--main-color);
+    height: 2px;
+    width: 80%;
+}
+
+.equipo {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--main-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+video {
+    width: 60%;
+}
+
+.video {
+    display: flex;
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+.video .titulo,
+.creditos {
+    text-align: justify;
+    padding-left: 10px;
+}
+
+.enlace-video {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+}
+
+/*MENÚ DE NAVEGACIÓN*/
+
+.navbar {
+    overflow: hidden;
+    background-color: var(--accent-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    display: block;
+    padding: -8px;
+    transition: 0.5s;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.5s;
+
+    white-space: nowrap;
+    width: 12%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-mensajeerror {
+    display: none;
+}
+
+.navbar a:hover {
+    background: var(--secondary-color);
+    color: var(--accent-text-color);
+    transition: 0.5s;
+}
+
+iframe {
+    height: 58px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: block;
+}
+
+/*AUDIOS*/
+audio {
+    width: 100%;
+}
+
+
+
+.mensajeerror {
+    display: none;
+}
+
+
+/*tarjetas*/
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin: 70px 0;
+}
+
+.tarjetas img {
+    width: 100%;
+    height: 180px;
+}
+
+.tarjetas h4 {
+    /* font-size: 20px; */
+    margin: 10px 0;
+    text-align: justify;
+    height: 80px;
+}
+
+/* .tarjetas p{
+    white-space: nowrap; 
+    width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  } */
+
+.tarjetas div {
+    color: var(--primary-text-color);
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tarjetas a {
+    padding: 10px 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
